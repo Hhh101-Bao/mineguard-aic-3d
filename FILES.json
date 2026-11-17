@@ -1,13 +1,8 @@
 [
   {
-    "file": "index.html",
-    "bytes": 9332,
-    "sha256": "5ea5796d940c3140b78212af3ed782f06610c50058d4148c068248a3c97b7726"
-  },
-  {
-    "file": "styles.css",
-    "bytes": 24275,
-    "sha256": "7b84c860396bcb0a5356a55a17a351ff31a94720bafced4bfbe2c9848f242972"
+    "file": ".nojekyll",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
   },
   {
     "file": "app.js",
@@ -20,9 +15,19 @@
     "sha256": "e7e4960e3ec66f2693d1ac1e4517da2deacc27bf47e9333502d36433017eb0cd"
   },
   {
-    "file": "vendor/three.local.js",
-    "bytes": 2006951,
-    "sha256": "c2a246860984f78b0919c5b67073f0080703e6899bda58403624e440ac3211a3"
+    "file": "index.html",
+    "bytes": 10135,
+    "sha256": "e3419e1fa9a89c74dd334adb8e8ae127cf6a381f9db8581db97a238265de809f"
+  },
+  {
+    "file": "styles.css",
+    "bytes": 24275,
+    "sha256": "7b84c860396bcb0a5356a55a17a351ff31a94720bafced4bfbe2c9848f242972"
+  },
+  {
+    "file": "vendor/THREE-LICENSE.txt",
+    "bytes": 1081,
+    "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
   },
   {
     "file": "vendor/chx3-cad.js",
@@ -30,8 +35,78 @@
     "sha256": "65aee31c64b32604c6364c984c3963714bb2fbe01b6f8a7baaa5c324208c1a90"
   },
   {
-    "file": "vendor/THREE-LICENSE.txt",
-    "bytes": 1081,
-    "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    "file": "vendor/chx3-cad.meta.js",
+    "bytes": 537,
+    "sha256": "c6156b2b21d0b2cc099befb5a64de1b2bb09def33c4ae82d6ff3facce3c6164e"
+  },
+  {
+    "file": "vendor/chx3-cad.part-01.js",
+    "bytes": 580757,
+    "sha256": "84ec8cbc84e8eecf14abaf0e2c4f0bae2888acd9725830bca1564304fd03a713"
+  },
+  {
+    "file": "vendor/chx3-cad.part-02.js",
+    "bytes": 588159,
+    "sha256": "7eac33dc8d70e82507160a6e25b548d1eabe34b8d859bc4d7e040fc5c554ff91"
+  },
+  {
+    "file": "vendor/chx3-cad.part-03.js",
+    "bytes": 570281,
+    "sha256": "ad512d031243b6cbf1fcad279bef1d9f14942de2b8b9dc1bea1d964cbdd69029"
+  },
+  {
+    "file": "vendor/chx3-cad.part-04.js",
+    "bytes": 564437,
+    "sha256": "93b420ed8044a1a55ad2d40e91dd828bd50834f748ad8250ec41050dc8b57b41"
+  },
+  {
+    "file": "vendor/chx3-cad.part-05.js",
+    "bytes": 566664,
+    "sha256": "57c7c4918d4105e1bfa7c9a5e2f25eed01447cf3e2398815788d64c7556103dc"
+  },
+  {
+    "file": "vendor/chx3-cad.part-06.js",
+    "bytes": 566239,
+    "sha256": "f7f2b2081aa4b4314a5654e9389b7b239392f2316ea3cacf8be029e13b240d40"
+  },
+  {
+    "file": "vendor/chx3-cad.part-07.js",
+    "bytes": 555733,
+    "sha256": "1acafbd5a04880bc9055ae488f74675b36df97ece556dad32ccefd7fda025238"
+  },
+  {
+    "file": "vendor/chx3-cad.part-08.js",
+    "bytes": 490683,
+    "sha256": "4935ad0071827696a841998c25feb593990fc2953df0f4fea09b938356ae92e7"
+  },
+  {
+    "file": "vendor/chx3-cad.part-09.js",
+    "bytes": 344241,
+    "sha256": "cdfa20695518b393a173c606a173115c05bae7dd51172bee2ee4a6ad939ee5fc"
+  },
+  {
+    "file": "vendor/chx3-cad.part-10.js",
+    "bytes": 527860,
+    "sha256": "ba2464425186a055d9b13253ee58faa6d65be9c7ae7e98d1b905f4525233025e"
+  },
+  {
+    "file": "vendor/chx3-cad.part-11.js",
+    "bytes": 499300,
+    "sha256": "1ca120557d3337fd1274b7809dd360806c69102fb15eef37dc9e687fbbea337f"
+  },
+  {
+    "file": "vendor/chx3-cad.part-12.js",
+    "bytes": 567066,
+    "sha256": "aa4e2a2b81fb53bed4b9acc19ca06cbdacdde5eb0c79f4f5205312c3e9a96969"
+  },
+  {
+    "file": "vendor/chx3-cad.part-13.js",
+    "bytes": 333273,
+    "sha256": "c1b852eb79786f0f262373abb9ca67edbeaba957176341eb5aac22c86a1f3719"
+  },
+  {
+    "file": "vendor/three.local.js",
+    "bytes": 2006951,
+    "sha256": "c2a246860984f78b0919c5b67073f0080703e6899bda58403624e440ac3211a3"
   }
 ]

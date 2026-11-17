@@ -4,6 +4,14 @@
 
 全部运行资源在 dist 目录内。使用 HTML、CSS、JavaScript 和本地 Three.js，无需前端框架、数据库或运行时外网模型服务。
 
+## GitHub Pages 公开入口
+
+[打开三维交互工作台](https://hhh101-bao.github.io/mineguard-aic-3d/)
+
+GitHub Pages 从 gh-pages 分支的根目录发布。该分支只包含 dist 中的静态文件。原始 CAD 数据保留在 vendor/chx3-cad.js，页面通过多个本地脚本并行下载同一份完整几何；拆分前后逐值比对一致，保留全部 99 个零件。
+
+更新 CAD 发布资源时先运行 `node scripts/pack-cad.cjs`，然后运行 `node scripts/verify-dist.cjs`。发布需要同时更新 main 的源文件和 gh-pages 的静态内容。
+
 ## Render 发布设置
 
 - 类型：Static Site
