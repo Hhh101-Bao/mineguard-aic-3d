@@ -1,0 +1,2 @@
+/* Original CAD metadata; geometry is loaded by the following local script fragments. */
+window.MineGuardCAD={"source":"CHX-3装配图.SLDASM","sha256":"b92197c442d631002e1660388a2efea7f3314b5c588e66a8d38b4165981ea380","componentCount":99,"triangleCount":381448,"displayScale":0.215,"note":"98 instances from original part files; terminal virtual geometry from original assembly cache, matched by unique envelope and stream order. Original occurrence placement preserved. Display meshes, not B-rep or validated kinematics.","parts":[]};
