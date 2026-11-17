@@ -1,0 +1,37 @@
+[
+  {
+    "file": "index.html",
+    "bytes": 9332,
+    "sha256": "5ea5796d940c3140b78212af3ed782f06610c50058d4148c068248a3c97b7726"
+  },
+  {
+    "file": "styles.css",
+    "bytes": 24275,
+    "sha256": "7b84c860396bcb0a5356a55a17a351ff31a94720bafced4bfbe2c9848f242972"
+  },
+  {
+    "file": "app.js",
+    "bytes": 93254,
+    "sha256": "ddc1a0c16edaa2742a34f75dec607ba28136fb3dd3ce2fe335cad2c9b1cc4bcc"
+  },
+  {
+    "file": "favicon.svg",
+    "bytes": 293,
+    "sha256": "e7e4960e3ec66f2693d1ac1e4517da2deacc27bf47e9333502d36433017eb0cd"
+  },
+  {
+    "file": "vendor/three.local.js",
+    "bytes": 2006951,
+    "sha256": "c2a246860984f78b0919c5b67073f0080703e6899bda58403624e440ac3211a3"
+  },
+  {
+    "file": "vendor/chx3-cad.js",
+    "bytes": 6752979,
+    "sha256": "65aee31c64b32604c6364c984c3963714bb2fbe01b6f8a7baaa5c324208c1a90"
+  },
+  {
+    "file": "vendor/THREE-LICENSE.txt",
+    "bytes": 1081,
+    "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+  }
+]

@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: mineguard-aic-3d
+    runtime: static
+    buildCommand: node scripts/verify-dist.cjs
+    staticPublishPath: ./dist

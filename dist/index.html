@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><link rel="icon" href="./favicon.svg" type="image/svg+xml"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a1017"><meta name="description" content="矿域智盾矿井安全防控机器人：原始六轴机械臂与程序化车体三维拆解工作台。"><title>矿域智盾 · 三维拆解工作台</title><link rel="stylesheet" href="./styles.css"><script defer src="./vendor/three.local.js"></script><script defer src="./vendor/chx3-cad.js"></script><script defer src="./app.js"></script></head>
+<body>
+<svg class="svg-sprite" aria-hidden="true"><defs>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m3 8 9-5 9 5-9 5-9-5Zm0 5 9 5 9-5M3 18l9 5 9-5"/></symbol>
+<symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 10L3 7m9 5 9-5m-9 5v10"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></symbol>
+<symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 1 7M3 4v6h6"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8V4Z"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v14H3V7Z"/><circle cx="12" cy="13" r="4"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 4 3v3m-1 3h.01"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4M10 10h4v4h-4z"/></symbol>
+<symbol id="i-arm" viewBox="0 0 24 24"><path d="M3 21h12M6 21v-4l5-6-4-5 4-3 6 8-5 7v3m5-10 3 1 2-2M7 6l-3 1"/><circle cx="10" cy="12" r="2"/></symbol>
+<symbol id="i-track" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="12" rx="6"/><circle cx="7" cy="13" r="2"/><circle cx="17" cy="13" r="2"/><path d="M8 3h8v4"/></symbol>
+<symbol id="i-power" viewBox="0 0 24 24"><rect x="3" y="5" width="16" height="15" rx="2"/><path d="M19 10h3v5h-3M11 7l-3 6h5l-3 5"/></symbol>
+<symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 2s2 5-2 7c-2-1-2-3-2-3S3 12 5 17s12 7 14-1c1-4-2-7-2-7s1 5-3 5c-3-2 1-7-2-12Z"/></symbol>
+<symbol id="i-signal" viewBox="0 0 24 24"><path d="M3 8a14 14 0 0 1 18 0M6 12a9 9 0 0 1 12 0m-9 4a4 4 0 0 1 6 0m-3 4h.01"/></symbol>
+<symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+</defs></svg>
+<header class="app-header">
+ <div class="brand"><span class="brand-mark"><svg><use href="#i-cube"/></svg></span><div><h1>矿域智盾<span class="brand-divider">/</span><span class="title-sub">三维拆解工作台</span></h1><p>MINEGUARD <span>HARDWARE ASSEMBLY LAB</span></p></div></div>
+ <div class="header-actions"><span class="local-status"><i></i>本地运行 <span>·</span> 原始 CAD + 程序化车体</span><button id="demo" class="button demo-button"><svg><use href="#i-play"/></svg><span>演示模式</span></button><button id="help" class="icon-button" aria-label="操作帮助" title="操作帮助"><svg><use href="#i-help"/></svg></button></div>
+</header>
+<main class="workspace">
+ <aside class="parts-panel" aria-label="组件目录">
+  <div class="model-heading"><div class="overline">ROBOT SYSTEM / MG–01</div><h2>矿井安全防控机器人</h2><p>履带式多模态移动感知终端</p><button id="overview" class="overview-button active"><svg><use href="#i-cube"/></svg>整机总览<span>↗</span></button></div>
+  <div class="section-heading"><h3>组件目录</h3><span>09 SYSTEMS</span></div>
+  <div id="part-list" class="part-list"></div>
+  <div class="parts-foot"><span class="small-square"></span><div>基于实拍与项目技术方案<p>结构比例估计 · 参数来源可查看</p></div></div>
+ </aside>
+ <section class="center-panel" aria-label="三维交互工作区">
+  <div class="stage" id="stage">
+   <div class="stage-heading"><div class="breadcrumb"><span>MG–01</span><span class="slash">/</span><strong id="view-title">整机视图</strong></div><div class="view-style"><button id="solid-mode" class="active" aria-pressed="true">实体</button><button id="wire-mode" aria-pressed="false">线框</button></div></div>
+   <canvas id="scene" aria-label="可旋转、缩放和选择部件的机器人三维模型" tabindex="0"></canvas>
+   <svg id="leader-lines" class="leader-lines" aria-hidden="true"></svg><div id="labels" class="labels"></div>
+   <div class="viewport-tools"><button id="reset-view" class="icon-button" title="恢复视角 · R" aria-label="恢复视角"><svg><use href="#i-reset"/></svg></button><button id="focus-view" class="icon-button" title="聚焦选中部件 · F" aria-label="聚焦选中部件"><svg><use href="#i-target"/></svg></button><span></span><button id="screenshot" class="icon-button" title="导出当前三维画面 PNG" aria-label="导出当前三维画面"><svg><use href="#i-camera"/></svg></button><button id="fullscreen" class="icon-button" title="全屏工作台" aria-label="全屏工作台"><svg><use href="#i-expand"/></svg></button></div>
+   <div class="orientation" aria-hidden="true"><span class="axis-y">Y</span><i></i><span class="axis-z">Z</span><span class="axis-x">X</span></div>
+   <div class="scene-caption"><span class="caption-dot"></span><span id="scene-caption">完整装配 · 九大子系统</span></div>
+   <div class="orbit-hint">拖动旋转<span>·</span>右键平移<span>·</span>滚轮缩放</div>
+   <div id="loading" class="loading"><span class="loading-ring"></span><strong>构建机器人几何结构</strong><span>载入原始机械臂与程序化车体</span></div>
+   <div id="render-error" class="render-error" hidden></div>
+  </div>
+  <div class="assembly-controls">
+   <div class="explode-row"><div class="explode-label"><svg><use href="#i-layers"/></svg><strong>结构拆解</strong><span id="assembly-state">完整装配</span></div><output id="explode-value" for="explode">0<span>%</span></output></div>
+   <div class="slider-row"><span>装配</span><input id="explode" type="range" min="0" max="100" value="0" step="1" aria-label="拆解程度"><span>展开</span></div>
+   <div class="control-row"><div class="main-controls"><button id="explode-toggle" class="button primary"><svg><use href="#i-layers"/></svg><span>拆解模型</span></button><button id="isolate" class="button" disabled><svg><use href="#i-target"/></svg><span>隔离部件</span></button></div><div class="display-controls"><label><input id="show-labels" type="checkbox" checked><span>部件标注</span></label><label><input id="show-grid" type="checkbox" checked><span>参考网格</span></label><button id="shell-view" class="text-button" aria-pressed="false">舱壳透视</button><button id="auto-rotate" class="text-button" aria-pressed="false">自动旋转</button></div></div>
+   <div class="camera-row"><span>标准视角</span><div role="group" aria-label="标准视角"><button data-view="iso" class="active">透视</button><button data-view="front">正视</button><button data-view="rearIso">后部</button><button data-view="side">侧视</button><button data-view="top">俯视</button></div><span class="model-scale">显示单位：100 mm / unit</span></div>
+  </div>
+ </section>
+ <aside class="inspector" aria-label="部件参数">
+  <div class="inspector-heading"><span class="overline">COMPONENT INSPECTOR</span><span class="inspector-led"></span></div>
+  <div id="inspector-content"></div>
+ </aside>
+</main>
+<footer class="status-bar"><div><span class="status-dot"></span><span id="runtime-status">正在初始化 Three.js</span></div><div><span id="mesh-stat">—</span><span class="status-divider">|</span><span id="triangle-stat">—</span><span class="status-divider">|</span><span>WebGL 2 · 本地资源</span></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<dialog id="help-dialog"><div class="dialog-heading"><div><span class="overline">QUICK GUIDE</span><h2>探索机器人结构</h2></div><button id="close-help" class="icon-button" aria-label="关闭帮助">×</button></div><dl class="help-list"><div><dt>鼠标左键拖动 / 单指拖动</dt><dd>自由旋转视角</dd></div><div><dt>滚轮 / 双指捏合</dt><dd>缩放模型</dd></div><div><dt>右键拖动 / Shift + 拖动</dt><dd>平移观察中心</dd></div><div><dt>点击部件 / 左侧目录</dt><dd>选择并查看参数；双击模型部件可聚焦</dd></div><div><dt><kbd>E</kbd> 整体拆解　<kbd>D</kbd> 零件展开　<kbd>F</kbd> 聚焦</dt><dd><kbd>R</kbd> 视角复位　<kbd>Esc</kbd> 退出隔离 / 清除选择</dd></div></dl><p class="source-note">车体尺寸为建模估计；机械臂使用用户提供的原 CAD。选型来自项目方案，页面不接入实时设备。</p><button id="help-done" class="button primary">开始探索 <svg><use href="#i-arrow"/></svg></button></dialog>
+<noscript><div class="no-script">请启用 JavaScript 后查看三维工作台。</div></noscript>
+</body></html>
